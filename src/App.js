@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import './testscss.scss'
 import SignIn from './login/index'
 import Chart from './component/chart/chart'
+import store from './store/index'
+import Test from './component/test'
 
 class App extends Component {
   constructor() {
@@ -15,6 +17,7 @@ class App extends Component {
     this.setState({
       judge: value
     })
+    console.log(store.getState)
   }
 
   render() {
@@ -23,6 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         {ele}
+        <Test />
       </div>
     );
   }

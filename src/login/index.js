@@ -13,6 +13,10 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 // import { login } from '../api/login'
+// connect方法的作用：将额外的props传递给组件，并返回新的组件，组件在该过程中不会受到影响
+// import { connect } from 'react-redux'
+// 引入action
+// import { setTest1, setTest2 } from '../store/action.js'
 
 const styles = theme => ({
   main: {
@@ -45,9 +49,9 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 3,
   },
 });
-var username = 'admin@hitinga.com', password = '123456'
+var username = '', password = ''
 function SignIn(props) {
-  console.log(props)
+  let { test1, test2 } = props
   const { classes } = props;
   return (
     <main className={classes.main}>
@@ -85,6 +89,8 @@ function SignIn(props) {
           登录
         </Button>
       </Paper>
+      <h1>{test1}</h1>
+      <h2>{test2}</h2>
     </main>
   );
 }
