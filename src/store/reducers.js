@@ -7,16 +7,16 @@ import defaultState from './state.js'
 function test1 (state = defaultState.test1, action) {
   // 不同的action有不同的处理逻辑
   switch (action.type) {
-    case 'SET_PAGE_TEST1':
+    case 'SET_TEST1':
       return action.data
     default:
       return state
   }
 }
-function test2 (state = defaultState.test2, action) {
+function test2List (state = defaultState.test2List, action) {
   // 不同的action有不同的处理逻辑
   switch (action.type) {
-    case 'SET_PAGE_TEST2':
+    case 'SET_TEST2':
       return action.data
     default:
       return state
@@ -25,5 +25,5 @@ function test2 (state = defaultState.test2, action) {
 
 export default combineReducers({
   test1,
-  test2
+  test2List
 })

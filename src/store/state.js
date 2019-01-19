@@ -1,6 +1,9 @@
 //管理数据的默认值
 export default {
-  test1: '这是测试1',
-  test2: '这是测试2',
-  test3: '这是测试3',
+  test1: '这是redux里的测试1',
+  test2List: [
+    {id: 1, name: '第一个数据'},
+    {id: 2, name: '第二个数据'},
+    {id: 3, name: '第三个数据'},
+  ],
 }

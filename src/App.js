@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      judge:true
+      judge:true,
+      testName: '这是父组件里stata的一个名称'
     }
   }
   changeJudge(value) {
@@ -26,7 +27,7 @@ class App extends Component {
     return (
       <div className="App">
         {ele}
-        <Test />
+        <Test name={this.state.testName}/>
       </div>
     );
   }
