@@ -49,16 +49,16 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 3,
   },
 });
-var username = '', password = ''
+
 function SignIn(props) {
-  let { test1, test2 } = props
-  const { classes } = props;
+  let {test1, test2} = props
+  const {classes} = props;
   return (
     <main className={classes.main}>
-      <CssBaseline />
+      <CssBaseline/>
       <Paper className={classes.paper}>
         <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
+          <LockOutlinedIcon/>
         </Avatar>
         <Typography component="h1" variant="h5" gutterBottom>
           系统登录
@@ -66,15 +66,15 @@ function SignIn(props) {
         <form className={classes.form}>
           <FormControl margin="normal" required fullWidth>
             <InputLabel htmlFor="email">账号</InputLabel>
-            <Input id="email" name="email" autoComplete="email" autoFocus value={username} />
+            <Input id="email" name="email" autoComplete="email" autoFocus />
           </FormControl>
           <FormControl margin="normal" required fullWidth>
             <InputLabel htmlFor="password">密码</InputLabel>
-            <Input name="password" type="password" id="password" autoComplete="current-password" value={password}/>
+            <Input name="password" type="password" id="password" autoComplete="current-password" />
           </FormControl>
           <FormControlLabel
             style={{float: 'left'}}
-            control={<Checkbox value="remember" color="primary" checked={true}/>}
+            control={<Checkbox value="remember" color="primary"/>}
             label="记住密码"
           />
         </form>
@@ -84,7 +84,7 @@ function SignIn(props) {
           variant="contained"
           color="primary"
           className={classes.submit}
-          onClick={()=>(props.changeJudgeValue(false))}
+          onClick={() => (props.changeJudgeValue(false))}
         >
           登录
         </Button>
@@ -94,6 +94,7 @@ function SignIn(props) {
     </main>
   );
 }
+
 // function loginBtn() {
 //   console.log('登录')
 //   login(username, password).then( res => {

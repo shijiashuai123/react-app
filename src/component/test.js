@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 
 // 引入action
 import { setTest1, setTest2List } from '../store/action.js'
+// 数字转换文字
 import {numTurnWord} from '../assets/util'
 class Test extends Component {
   constructor(props) {
