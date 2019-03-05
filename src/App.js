@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import './testscss.scss'
-import SignIn from './login/index'
-import Chart from './component/chart/chart'
+// import SignIn from './login/index'
+// import Chart from './component/chart/chart'
 import store from './store/index'
-import Test from './component/test'
+// import Test from './component/test'
+import Tab from './component/tabBar/index'
 
 class App extends Component {
   constructor() {
@@ -22,12 +23,13 @@ class App extends Component {
   }
 
   render() {
-    var ele = null
-    this.state.judge ? ele = <SignIn judge={this.state.judge} changeJudgeValue={this.changeJudge.bind(this)}/> : ele = <Chart />
+    // var ele = null
+    // this.state.judge ? ele = <SignIn judge={this.state.judge} changeJudgeValue={this.changeJudge.bind(this)}/> : ele = <Chart />
     return (
       <div className="App">
-        {ele}
-        <Test name={this.state.testName}/>
+        <Tab />
+        {/*{ele}*/}
+        {/*<Test name={this.state.testName}/>*/}
       </div>
     );
   }

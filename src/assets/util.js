@@ -138,21 +138,21 @@ export function sliceUrl(url, par) {
   console.log(par)
   console.log(url)
   var len = par.length + 1
-  var val = ''
+  // var str = 'woolni'
   if (url.indexOf(par1) !== -1) {
     var obj2 = url.substring(url.indexOf(par1), url.length)
     // console.log(obj2)
     if (obj2.indexOf('&') !== -1) {
-      return val = obj2.slice(obj2.indexOf(par1) + len, obj2.indexOf('&'))
+      return obj2.slice(obj2.indexOf(par1) + len, obj2.indexOf('&'))
     } else {
       if (obj2.indexOf('#') !== -1) {
-        return val = obj2.slice(obj2.indexOf(par1) + len, obj2.indexOf('#'))
+        return obj2.slice(obj2.indexOf(par1) + len, obj2.indexOf('#'))
       } else {
-        return val = obj2.slice(obj2.indexOf(par1) + len, obj2.length)
+        return obj2.slice(obj2.indexOf(par1) + len, obj2.length)
       }
     }
   } else {
-    return val = ''
+    return ''
   }
 }
 // URL中汉字解码 decodeURI(url)  编码 encodeUrl(url)
@@ -162,8 +162,9 @@ export function decodeUrl(url) {
 
 // 工具promise.all的用法  promise.all 异步代码同时执行(等到所有循环执行完毕才返回)，列表循环不会错乱。  
 // 列表里面没有返回totol要去调用接口去获取total，并且列表循环不能变化
-Promise.all(res.data.lists.map(item => { // 这里列表循环要用map 
-  getAlbumAudioList(1, 20).then(result => {
-    item.total = result.data.total
-  })
-}))
+
+// Promise.all(res.data.lists.map(item => { // 这里列表循环要用map
+//   getAlbumAudioList(1, 20).then(result => {
+//     item.total = result.data.total
+//   })
+// }))
